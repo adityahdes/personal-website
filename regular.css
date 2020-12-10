@@ -1,0 +1,109 @@
+body {
+    text-align:center;
+    background-color:black;
+    color: white;
+    font-family: monospace;
+    font-weight:normal;
+}
+
+a {
+    color: #8888ff;
+}
+
+h1 {
+    line-height:1em;
+    margin:5px;
+    color:#ccf;
+    text-align:inherit;
+}
+
+div#wrapper {
+    width:700px;
+    margin:auto;
+}
+
+div.info {
+    text-align: left;
+    padding: 5px;
+    margin: 0 auto;
+    width: auto;
+}
+
+div#photo {
+    width: 299px;
+    height: 400px;
+    margin:5px;
+    text-align:center;
+    float:left;
+    background:url(img/adi.jpg) top center no-repeat;
+}
+
+div#geninfo{
+    padding-left:20px;
+    width:auto;
+    /*font-size:20px;*/
+    text-align:center;
+    float:left;
+}
+
+/****** FOR BLINKING CURSOR ******/
+div#inputs {
+    text-align:left;
+    margin-left: 10px;
+}
+#inputs:before { content: "# " }
+
+div#cursor {
+    -webkit-animation: blink 2s linear 0s infinite;
+    animation: blink 2s linear 0s infinite; /* IE, Opera, Fx */
+
+    display: inline-block;
+    background: #111;
+    margin-left: 1px;
+}
+
+@keyframes blink {
+    0% { background: #aaa }
+    47% { background: #999 }
+    50% { background: #000 }
+    87% { background: #000 }
+    100% { background: #999 }
+}
+@-webkit-keyframes blink {
+    0% { background: #aaa }
+    47% { background: #999 }
+    50% { background: #000 }
+    87% { background: #000 }
+    100% { background: #999 }
+}
+/********************************/
+
+div.linklist {
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+    margin-bottom:10px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.linklist > a {
+    display:block;
+    text-align:center;
+    padding-left:10px;
+    text-decoration: none;
+    color:inherit;
+    height:1.7em;
+    line-height:1.7em;
+    width:300px;
+    margin:5px;
+    margin-left:0;
+    /*font-size:26px;*/
+}
+
+.linklist > a:before { content:"[ "; color:#777;}
+.linklist > a:after { content:" ]"; color:#777;}
+.linklist > a:hover:before { content:"> "; color:#fff; }
+.linklist > a:hover:after { content:" <"; color:#fff; }
+
+
